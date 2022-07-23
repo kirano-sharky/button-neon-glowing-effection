@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: black;
+}
+
+button {
+  position: relative;
+  color: white;
+  background: transparent;
+  font: 500 28px 'Montserrat';
+  padding: 30px 38px;
+  cursor: pointer;
+  transition: .6s;
+}
+
+@keyframes 全之顔色 {
+  25% {
+   background: #dbce12;
+   box-shadow: 0 0 10px #dbce12, 0 0 40px #dbce12, 0 0 80px #dbce12; 
+  }
+  50% {
+   background: #12db12;
+   box-shadow: 0 0 10px #12db12, 0 0 40px #12db12, 0 0 80px #12db12; 
+  }
+  75% {
+   background: #1a44db;
+   box-shadow: 0 0 10px #1a44db, 0 0 40px #1a44db, 0 0 80px #1a44db; 
+  }
+}
+
+button:hover {
+  background: #FF0077;
+  box-shadow: 0 0 10px #FF0077, 0 0 40px #FF0077, 0 0 80px #FF0077;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: 全之顔色 5s infinite;
+  animation-delay: 1.5s;
+  transition-delay: 1s;
+}
+
+button span {
+  position: absolute;
+  background: #FF0077;
+  opacity: 0;
+  transition: 1s;
+}
+
+button:hover span {
+  animation: 邊之顔色 5s infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes 邊之顔色 {
+  0%, 100% {
+    background: #FF0077
+  }
+  25% {
+    background: #dbce12;
+  }
+  50% {
+    background: #12db12;
+  } 
+  75% {
+    background: #1a44db;
+  }
+}
+
+button span:nth-child(1),
+button span:nth-child(2) {
+  top: 0;
+  left: 0;
+}
+
+button span:nth-child(3),
+button span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+button span:nth-child(1),
+button span:nth-child(3) {
+  width: 0%;
+  height: 2px;
+}
+
+button span:nth-child(2),
+button span:nth-child(4) {
+  height: 0%;
+  width: 2px;
+}
+
+button:hover span:nth-child(1),
+button:hover span:nth-child(3) {
+  width: 100%;
+  opacity: 1;
+}
+
+button:hover span:nth-child(2), 
+button:hover span:nth-child(4) {
+  height: 100%;
+  opacity: 1;
+}
