@@ -22,6 +22,16 @@ button {
   transition: .6s;
 }
 
+button:hover {
+  background: #FF0077;
+  box-shadow: 0 0 10px #FF0077, 0 0 40px #FF0077, 0 0 80px #FF0077;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: 全之顔色 5s infinite;
+  animation-delay: 1.5s;
+  transition-delay: 1s;
+}
+
 @keyframes 全之顔色 {
   25% {
    background: #dbce12;
@@ -35,16 +45,6 @@ button {
    background: #1a44db;
    box-shadow: 0 0 10px #1a44db, 0 0 40px #1a44db, 0 0 80px #1a44db; 
   }
-}
-
-button:hover {
-  background: #FF0077;
-  box-shadow: 0 0 10px #FF0077, 0 0 40px #FF0077, 0 0 80px #FF0077;
-  border-radius: 8px;
-  overflow: hidden;
-  animation: 全之顔色 5s infinite;
-  animation-delay: 1.5s;
-  transition-delay: 1s;
 }
 
 button span {
